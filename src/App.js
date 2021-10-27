@@ -1,25 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React,{ useState } from "react";
+import { BrowserRouter as Router,Switch, Route} from "react-router-dom";
+import {Header} from './components/Header'
+import {Watchlist} from './components/Watchlist'
+import {HomePage} from './components/HomePage'
+import MovieInfo from "./components/MovieInfo";
 
-import Movie from "./components/Movie";
-
-const api =
-"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=8fbbb787d44ee790aebc20d0dd773784&language=en-US&page=1";
+import {AppProvider} from "./components/Context";
 
 function App() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    fetch(api)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setMovies(data.results);
-      });
-  }, []);
-
-  return <div className="movie_container">
-    {movies.length > 0 && movies.map((movie) => 
-    <Movie key={movie.id} {...movie} />)}</div>;
+  return (
+<AppProvider>
+  <Router>
+    <Header/>
+    <Switch>
+      <Route exact path="/">
+        <HomePage/>
+      </Route>
+      <Route exact path="/movieinfo/:id">
+        <MovieInfo/>
+      </Route>
+      <Route exact path="/watchlist">
+        <Watchlist/>
+      </Route>
+    </Switch>
+  </Router>
+</AppProvider>
+  );
 }
 
 export default App;
