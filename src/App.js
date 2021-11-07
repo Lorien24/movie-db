@@ -13,7 +13,7 @@ function App() {
   <Router>
     <Header/>
     <Switch>
-      <Route exact path="/">
+      <Route exact path="/movie-db">
         <HomePage/>
       </Route>
       <Route exact path="/movieinfo/:id">
