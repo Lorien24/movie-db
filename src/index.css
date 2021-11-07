@@ -4,7 +4,7 @@
 
 :root {
   --main-bg-color: #15112e;
-  --second-color: #dcc415;
+  --second-color: #d1a82d;
 }
 ul,
 li {
@@ -12,6 +12,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 
 body {
@@ -146,7 +147,7 @@ code {
 }
 
 .btn:hover {
-  background-color: #1aa762;
+  background-color: #0fb462;
   opacity: 1;
   cursor: pointer;
 }
