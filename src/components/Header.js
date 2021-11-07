@@ -6,7 +6,7 @@ export const Header = () => {
     <header>
         <div className="header">
           <div className="logo_title">
-            <Link to="/">Popular Movies</Link>
+            <Link to="/movie-db">Popular Movies</Link>
           </div>
           <div className="watchlist_link">
             <Link to="/watchlist">Watchlist</Link>
