@@ -8,6 +8,7 @@ export const HomePage = () => {
   const [results, setResults] = useState([]);
   const [search, setSearch] = useState("");
 
+
   const myKey = "8fbbb787d44ee790aebc20d0dd773784";
   const apiMovies = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${myKey}&language=en-US&page=1`;
   const searchApi = `https://api.themoviedb.org/3/search/movie?api_key=${myKey}&query=`;
@@ -16,9 +17,6 @@ export const HomePage = () => {
     getMovies(apiMovies);
   }, []);
 
-  // useEffect(() => {
-  //   getGenres(genresApi);
-  // }, []);
 
   const getMovies = (API) => {
     fetch(API)
@@ -60,6 +58,7 @@ export const HomePage = () => {
                 {results.map((movie) => (
                   <li className="movie_li" key={movie.id}>
                     <ResultCard movie={movie} />
+                    
                   </li>
                 ))}
               </ul>

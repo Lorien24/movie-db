@@ -14,7 +14,7 @@ return (
     {type === "watchlist" && (
       <>
         <button className="btn" onClick={() => removeFromWatchlist(movie.id)}>
-          {favourite_icon}
+          {favourite_icon} Remove from watchlist
         </button>
       </>
     )}

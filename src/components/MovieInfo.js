@@ -20,13 +20,14 @@ function MovieInfo() {
           src={`https://image.tmdb.org/t/p/original${results.poster_path}`}
           alt={`${results.title} Poster`}
         />
+        </div>
         <div className="movie_descr">
           <h2>{results.title}</h2>
-          <p>Vote average:{results.vote_average}</p>
-          <p>Release Date:{results.release_date}</p>
-          <p>Overview:{results.overview}</p>
+          <p>Vote average: {results.vote_average}</p>
+          <p>Release Date: {results.release_date}</p>
+          <p>Overview: {results.overview}</p>
         </div>
-      </div>
+
     </div>
   );
 }

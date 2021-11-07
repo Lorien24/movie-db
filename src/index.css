@@ -45,10 +45,14 @@ code {
   color: black;
   font-weight: bold;
 }
-
-.home_content{
+.watchlist_link {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+.home_content {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 .header {
   background-color: var(--second-color);
@@ -60,6 +64,7 @@ code {
   height: 75px;
 }
 .search {
+  margin-top: 20px;
   float: right;
   padding: 0.5em 1.5em;
   font-size: 1.2rem;
@@ -85,6 +90,19 @@ code {
 }
 .movie_img {
   width: 300px;
+}
+.movie_poster img {
+  width: 400px;
+}
+.movie_descr {
+  margin-left: 120px;
+}
+.movie_container {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  margin: 35px auto;
+  justify-content: space-between;
 }
 .movie_info {
   display: flex;
@@ -136,4 +154,24 @@ code {
 .btn:disabled {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.wathclist_card {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  margin: 0 auto;
+  width: 1000px;
+}
+.wathclist_card img {
+  width: 300px;
+}
+.wathclist_card .movie_card {
+  margin-top: 40px;
+}
+.wathclist_card .btn {
+  display: flex;
+  align-items: center;
+}
+.watchlist_page .header {
+  background-color: var(--main-bg-color);
 }
