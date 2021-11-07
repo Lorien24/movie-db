@@ -11,9 +11,9 @@ function App() {
   return (
 <AppProvider>
   <Router>
-    <Header/>
-    <Switch>
-      <Route exact path="/movie-db">
+  <Switch>
+  <Route exact path="/movie-db">
+        <Header/>
         <HomePage/>
       </Route>
       <Route exact path="/movieinfo/:id">
